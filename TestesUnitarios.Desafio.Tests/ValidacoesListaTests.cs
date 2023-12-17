@@ -37,7 +37,7 @@ public class ValidacoesListaTests
     [Fact]
     public void NaoDeveConterONumero10NaLista()
     {
-        //TODO: Implementar método de teste
+        //Implementado
 
         // Arrange
         var lista = new List<int> { 5, -1, -8, 9 };
@@ -45,42 +45,50 @@ public class ValidacoesListaTests
 
         // Act
 
+        var resultado = _validacoes.ListaContemDeterminadoNumero(lista, numeroParaProcurar);
+
         // Assert
+        Assert.False(resultado);
+
     }
 
-    //TODO: Corrigir a anotação [Fact]
+    //Corrigido
+    [Fact]
     public void DeveMultiplicarOsElementosDaListaPor2()
     {
-        //TODO: Implementar método de teste
+        //Implementado
 
         // Arrange
         var lista = new List<int> { 5, 7, 8, 9 };
         var resultadoEsperado = new List<int> { 10, 14, 16, 18 };
-        
+
         // Act
+        List<int> listaMultiplicada = _validacoes.MultiplicarNumerosLista(lista, 2);
 
         // Assert
+        Assert.Equal(resultadoEsperado, listaMultiplicada);
     }
 
     [Fact]
     public void DeveRetornar9ComoMaiorNumeroDaLista()
     {
-        //TODO: Implementar método de teste
+        //Implementado
 
         // Arrange
         var lista = new List<int> { 5, -1, -8, 9 };
 
         // Act
+        int maiorValor = _validacoes.RetornarMaiorNumeroLista(lista);
 
         // Assert
-        //TODO: Corrigir o Assert.Equal com base no retorno da chamada ao método
-        Assert.Equal(9, 9);
+        //Corrigido
+        Assert.Equal(9, maiorValor);
     }
 
     [Fact]
     public void DeveRetornarOitoNegativoComoMenorNumeroDaLista()
     {
-        //TODO: Implementar método de teste
+        //Implementado
 
         // Arrange
         var lista = new List<int> { 5, -1, -8, 9 };
@@ -89,7 +97,7 @@ public class ValidacoesListaTests
         var resultado = _validacoes.RetornarMenorNumeroLista(lista);
 
         // Assert
-        //TODO: Corrigir o Assert.Equal com base no retorno da chamada ao método
-        Assert.Equal(-8, -8);
+        //Corrigido
+        Assert.Equal(-8, resultado);
     }
 }
