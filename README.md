@@ -77,5 +77,30 @@ O projeto está estruturado da seguinte maneira:
 ![Métodos Swagger](Imagens/projeto.png)
 
 
-## Solução
-O código de testes está pela metade, e você deverá dar continuidade implementando os testes descritos acima, para que no final, tenhamos um programa de testes funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+## Solução Implementada
+
+Implementei testes unitários para as classes ValidacoesLista e ValidacoesString, utilizando o xUnit. Esses testes garantem a correta execução das operações críticas do sistema. Aqui está o que eu fiz:
+
+- Em ValidacoesLista
+  - Criei testes para verificar a remoção de números negativos de uma lista.
+  - Assegurei que o método para verificar a presença de um número em uma lista funcione corretamente.
+  - Testei a multiplicação de números de uma lista por um dado número.
+  - Confirmei que os métodos para retornar o maior e o menor número de uma lista estão corretos.
+
+- Em ValidacoesString
+  - Testei a contagem de caracteres em uma string.
+  - Verifiquei se um texto contém uma sequência de caracteres procurada.
+  - Confirmei que o método identifica corretamente se um texto termina com uma sequência específica de caracteres.
+
+- Testes Realizados
+  - Remoção de números negativos.
+  - Verificação da presença do número 9 em uma lista.
+  - Confirmação de que o número 10 não está presente em uma lista.
+  - Multiplicação dos elementos de uma lista por 2.
+  - Identificação do maior número 9 e do menor número -8 em uma lista.
+  - Contagem de caracteres na palavra "Matrix".
+  - Busca pela palavra "qualquer" em um texto.
+  - Checagem de que a palavra "teste" não está em um texto.
+  - Verificação de que um texto termina com "procurado".
+
+Estruturei a solução em dois projetos dentro de uma solução Visual Studio: um projeto de console para as classes de validação e um projeto de testes para os testes unitários. Estes testes foram criados para aumentar a confiança na qualidade do código e prevenir regressões.
